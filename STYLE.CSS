@@ -1,0 +1,181 @@
+
+  
+    * {margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif;}
+    
+    html{ scroll-behavior: smooth; }
+    body { background:#f8fcfc; color:#333; line-height:1.6; }
+
+    /* Header & Navbar */
+    header { display:flex; justify-content:space-between; align-items:center; padding:15px 40px; background:#e6f6f7; position: sticky; top: 0; z-index: 1000; }
+    header h2 { color:#008cba; }
+    nav a { margin:0 15px; text-decoration:none; color:#333; font-weight:500; transition: color 0.3s ease; }
+    nav a:hover, nav a.active { color:#7d3cff; font-weight:bold; }
+
+    /* Hero Section */
+    .hero { display:flex; justify-content:space-between; align-items:center; padding:50px; background:white; }
+    .hero-text { max-width:50%; }
+    .hero h1 { font-size:3.5rem; color:#008cba; }
+    .hero h2 { font-size:2rem; margin-top:10px; }
+    .hero p { margin:20px 0; font-size:1.1rem; }
+    .hero button { background:#7d3cff; color:white; padding:12px 20px; border:none; border-radius:6px; cursor:pointer; font-size:1rem; transition: background 0.3s; }
+    .hero button:hover { background:#5e2ccc; }
+    .hero img { max-width:40%; border-radius:12px; }
+
+    /* Features Section */
+    .features { text-align:center; padding:50px 20px; background:#f0fdfd; }
+    .features h2 { font-size:2rem; margin-bottom:10px; }
+    .features p { margin-bottom:40px; font-size:1.1rem; }
+    .feature-cards { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
+    .card { background:white; padding:20px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); width:280px; transition:transform .2s; }
+    .card:hover { transform:translateY(-5px); }
+    .card h3 { margin:10px 0; color:#008cba; }
+
+    /* Appointments Section */
+    .appointments { display:flex; align-items:center; justify-content:space-between; padding:50px; background:white; }
+    .appointments-text { max-width:50%; }
+    .appointments h2 { font-size:2rem; margin-bottom:15px; }
+    .appointments p { margin-bottom:20px; }
+    .appointments button { background:#7d3cff; color:white; padding:12px 20px; border:none; border-radius:6px; cursor:pointer; font-size:1rem; transition: background 0.3s; }
+    .appointments button:hover { background:#5e2ccc; }
+    .appointments img { max-width:40%; border-radius:12px; }
+
+    /* Hospital Map */
+    .hospital-map { padding:50px; background:#f9f9f9; text-align:center; }
+    .hospital-map h2 { font-size:2rem; margin-bottom:10px; color:#008cba; }
+    .hospital-map p { margin-bottom:20px; font-size:1.1rem; }
+
+    /* About Us Section */
+    #about { padding: 60px; background-color: #fdfdfd; text-align:center; }
+    #about h2 { margin-bottom:20px; color:#008cba; }
+    #about p { max-width:800px; margin:0 auto; font-size:18px; color:#444; }
+    #about img { border-radius:10px; max-width:100%; height:auto; }
+    #about h3 { margin-top:15px; color:#008cba; }
+    #about .roadmap div { flex:1; min-width:250px; background:#fff; border-radius:10px; padding:20px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+
+    /* FAQ Section */
+    #faq { padding: 60px; background-color:#eaf7f7; text-align:center; }
+    #faq h2 { margin-bottom:20px; color:#008cba; }
+    #faq p { max-width:800px; margin:0 auto 40px; font-size:18px; color:#444; }
+    #faq details { margin-bottom:15px; background:#fff; padding:15px; border-radius:8px; box-shadow:0 3px 8px rgba(0,0,0,0.1); }
+    #faq summary { font-weight:bold; cursor:pointer; }
+
+    /* Contact Section */
+    #contact { padding:60px; background-color:#fdfdfd; text-align:center; }
+    #contact h2 { margin-bottom:20px; color:#008cba; }
+    #contact p { max-width:800px; margin:0 auto 40px; font-size:18px; color:#444; }
+    #contact input, #contact textarea { padding:12px; border:1px solid #ccc; border-radius:6px; width:100%; }
+    #contact button { background:#008cba; color:white; padding:12px; border:none; border-radius:6px; cursor:pointer; font-size:16px; transition: background 0.3s; }
+    #contact button:hover { background:#006b9c; }
+
+    /* Footer */
+    footer { background:#008cba; color:white; text-align:center; padding:20px; }
+
+    /* Chatbot Button */
+    #chatbot-btn { position:fixed; bottom:20px; right:20px; background:#008cba; color:white; border:none; border-radius:50%; width:60px; height:60px; cursor:pointer; font-size:1.5rem; z-index:1000; }
+
+    /* Chat Modal */
+    #chat-modal { position:fixed; top:0; left:0; right:0; bottom:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.5); z-index:1000; }
+    #chatbox { background:white; width:90%; max-width:500px; height:80%; border-radius:12px; display:flex; flex-direction:column; overflow:hidden; box-shadow:0 8px 20px rgba(0,0,0,0.3); animation:fadeIn 0.3s ease; }
+    #chat-header { background:#008cba; color:white; padding:12px 16px; display:flex; justify-content:space-between; align-items:center; font-weight:bold; font-size:1rem; }
+    #chat-header select { padding:4px 6px; border-radius:6px; border:none; cursor:pointer; }
+
+    #chat-messages { flex:1; padding:12px; overflow-y:auto; display:flex; flex-direction:column; gap:8px; background:#f4f9f9; }
+    .message { max-width:75%; padding:10px 16px; border-radius:20px; font-size:0.95rem; word-wrap:break-word; line-height:1.4; position:relative; animation:slideUp 0.3s ease; }
+    .user { align-self:flex-end; background:#008cba; color:white; border-bottom-right-radius:0; }
+    .ai { align-self:flex-start; background:#e6e6e6; color:#333; border-bottom-left-radius:0; }
+    
+    
+    
+    /*#chat-input { display:flex; border-top:1px solid #ccc; }*/
+    /*#chat-input input { flex:1; border:none; padding:12px 15px; outline:none; font-size:1rem; }*/
+    /*#chat-input button { background:#008cba; border:none; color:white; padding:12px 18px; cursor:pointer; font-size:1rem; transition: background 0.3s; }*/
+    /*#chat-input button:hover { background:#006b9c; }*/
+    
+    
+    /* Chat input container */
+#chat-input {
+  display: flex;
+  border-top: 1px solid #ccc;
+  padding: 5px;
+  gap: 5px;
+  background: #f4f9f9;
+  align-items: center;
+}
+
+/* Text input */
+#chat-input input {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px 15px;
+  outline: none;
+  font-size: 1rem;
+}
+
+/* Send button */
+#chat-input button:last-child {
+  background: #008cba;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+#chat-input button:last-child:hover {
+  background: #006b9c;
+}
+
+/* Microphone button */
+#mic-btn {
+  background: #7d3cff;
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+#mic-btn:hover {
+  background: #5e2ccc;
+}
+#mic-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Optional: pulse effect when recording */
+#mic-btn.recording {
+  animation: pulse 1s infinite;
+  background: #e74c3c;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(231, 76, 60, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); }
+}
+
+    
+    .typing { font-style:italic; color:#666; display:inline-block; }
+    .dot { display:inline-block; animation: blink 1s infinite; }
+    .dot:nth-child(2){ animation-delay:0.2s; }
+    .dot:nth-child(3){ animation-delay:0.4s; }
+
+    @keyframes blink{0%,80%,100%{opacity:0;}40%{opacity:1;}}
+    @keyframes fadeIn{from{opacity:0;transform:scale(0.95);}to{opacity:1;transform:scale(1);}}
+    @keyframes slideUp{from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);}}
+
+    /* Mobile Responsiveness */
+    @media (max-width:768px){
+      .hero, .appointments{flex-direction:column; text-align:center;}
+      .hero-text, .appointments-text{max-width:100%;}
+      .hero img, .appointments img{max-width:80%; margin-top:20px;}
+      #chatbox{width:95%; height:85%;}
+    }
+  
+

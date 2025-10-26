@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale-1.0">
+  <title>Sehat Bandhu - Your AI Health Companion</title>
+  <link rel="stylesheet" href="STYLE.CSS">
+</head>
+<body>
+
+  <header>
+    <h2>💙 Sehat Bandhu</h2>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#appointments">Appointments</a>
+      <a href="#hospitals">Hospitals</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>SehatBandhu</h1>
+      <h2>Your AI Health Companion</h2>
+      <p>Accessible healthcare guidance 24×7 in your language.</p>
+      <button onclick="openChat()">Start Chat</button>
+    </div>
+    <img src="https://placehold.co/500x300/e6f6f7/008cba?text=Health" alt="Health Image">
+  </section>
+
+  <section class="features">
+    <h2>A New Era of Healthcare Access</h2>
+    <p>Sehat Bandhu leverages cutting-edge AI to make health information accessible to everyone, everywhere.</p>
+    <div class="feature-cards">
+      <div class="card">
+        <h3>🤖 AI Health Chatbot</h3>
+        <p>Get instant, personalized health guidance from our advanced AI, available anytime you need it.</p>
+      </div>
+      <div class="card">
+        <h3>🌐 Multilingual Support</h3>
+        <p>Communicate in your preferred language for clear and comfortable health conversations.</p>
+      </div>
+      <div class="card">
+        <h3>👨‍⚕️ Expert-Backed Info</h3>
+        <p>Our AI provides information from verified sources like the WHO and Ministry of Health.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="appointments" class="appointments">
+    <div class="appointments-text">
+      <h2>Book Hospital Appointments</h2>
+      <p>Seamlessly book appointments at government hospitals through the official ORS system. Take control of your healthcare with a few clicks.</p>
+      <button onclick="window.open('https://ors.gov.in','_blank')">Book on ORS.gov.in</button>
+    </div>
+    <img src="https://placehold.co/400x300/eaf7f7/008cba?text=Hospital" alt="Hospital">
+  </section>
+
+  <section id="hospitals" class="hospital-map">
+    <h2>Find a Hospital Near You</h2>
+    <p>Use the map below to find hospitals and healthcare facilities in your area.</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11610096347!2d72.741099!3d19.082197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63f6b6d4c39%3A0x6a11d53e2ed4d8d2!2sHospital!5e0!3m2!1sen!2sin!4v1695039593566!5m2!1sen!2sin" width="100%" height="450" style="border:0; border-radius:12px;" allowfullscreen loading="lazy"></iframe>
+  </section>
+
+  <section id="about" style="padding: 60px; background-color: #fdfdfd; text-align: center;">
+    <h2>About Sehat Bandhu</h2>
+    <p style="max-width: 800px; margin: 0 auto; font-size: 18px; color: #444;">
+      We are Team <a style = "color : #008cba;" href="#">PragatiWave</a>, a group of passionate Innovators committed to revolutionizing healthcare access. 
+      Sehat Bandhu is our entry for the Smart India Hackathon (SIH) 2025.
+    </p>
+    <div style="display: flex; align-items: center; justify-content: center; gap: 30px; margin-top: 40px; flex-wrap: wrap;">
+      <img src="https://placehold.co/600x300/f0fdfd/444?text=Our+Mission" alt="About Image" style="border-radius: 10px; max-width: 100%; height: auto;">
+      <div style="max-width: 400px; text-align: left;">
+        <h3>Our Mission</h3>
+        <p>To bridge the gap in healthcare accessibility by providing a reliable, multilingual, and user-friendly AI companion that empowers individuals to take control of their health.</p>
+        <h3>Our Vision</h3>
+        <p>We envision a future where everyone, regardless of location or language, has immediate access to basic healthcare guidance, leading to more informed and healthier communities.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <p>Find answers to common questions about Sehat Bandhu.</p>
+    <div style="max-width:800px; margin:0 auto; text-align:left;">
+      <details><summary>What is Sehat Bandhu?</summary><p>Sehat Bandhu is an AI-powered healthcare assistant that helps users access healthcare information easily.</p></details>
+      <details><summary>Is Sehat Bandhu a replacement for a doctor?</summary><p>No. Sehat Bandhu is an AI companion for guidance, but medical consultation with doctors is always recommended.</p></details>
+      <details><summary>How does the AI work?</summary><p>It uses natural language processing and medical datasets to provide health-related information.</p></details>
+      <details><summary>Is my data private?</summary><p>Yes. We prioritize privacy and security, ensuring that your data is encrypted and never misused.</p></details>
+      <details><summary>How can I book a hospital appointment?</summary><p>You can use the appointment booking feature on the platform to connect with hospitals and schedule visits.</p></details>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or suggestions? We'd love to hear from you!</p>
+    <form id="contactForm" style="max-width:600px; margin:0 auto; display:flex; flex-direction:column; gap:15px; text-align:left;">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>© 2025 Sehat Bandhu | All rights reserved</footer>
+
+  <button id="chatbot-btn" onclick="openChat()">💬</button>
+  <div id="chat-modal">
+    <div id="chatbox">
+      <div id="chat-header">
+        <span>Sehat Bandhu AI</span>
+        <span class="close-btn" onclick="closeChat()">×</span>
+      </div>
+      <div id="chat-messages"></div>
+      <div id="chat-input">
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button id="mic-btn" title="Speak"><img src="https://img.icons8.com/ios-filled/24/ffffff/microphone.png" alt="mic"/></button>
+        <button id="send-btn">Send</button>
+      </div>
+    </div>
+  </div>
+
+ <script>
+    // --- DOM Element References ---
+    const chatModal = document.getElementById('chat-modal');
+    const chatMessages = document.getElementById('chat-messages');
+    const userInput = document.getElementById('user-input');
+    const sendBtn = document.getElementById('send-btn');
+    // ## ENHANCEMENT: languageSelect constant is no longer needed.
+    
+    // --- Chat Modal Functions ---
+    function openChat() {
+      chatModal.style.display = 'flex';
+      const welcomeText = "Hello! I'm Sehat Bandhu. How can I help you today?";
+      addMessage(welcomeText, 'ai');
+      // ## ENHANCEMENT: Automatically speak the welcome message
+      playAudioFromText(welcomeText, 'en'); 
+    }
+
+    function closeChat() {
+      chatModal.style.display = 'none';
+      chatMessages.innerHTML = '';
+    }
+    
+    // --- Add a message to the chat window ---
+    function addMessage(text, sender) {
+      const messageElement = document.createElement('div');
+      messageElement.classList.add('message', sender);
+      messageElement.innerHTML = text;
+      chatMessages.appendChild(messageElement);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+    
+    // --- Typing Indicator Functions ---
+    function showTypingIndicator() {
+        const typingIndicator = document.createElement('div');
+        typingIndicator.classList.add('message', 'ai', 'typing-indicator');
+        typingIndicator.innerHTML = `<span class="typing">Typing<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></span>`;
+        chatMessages.appendChild(typingIndicator);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function removeTypingIndicator() {
+        const indicator = document.querySelector('.typing-indicator');
+        if (indicator) {
+            indicator.remove();
+        }
+    }
+
+    // --- ## ENHANCEMENT: New function to play audio from Base64 string ---
+    function playAudio(base64String) {
+        if (!base64String) {
+            console.log("No audio data received.");
+            return;
+        }
+        const audio = new Audio('data:audio/mpeg;base64,' + base64String);
+        audio.play().catch(e => console.error("Audio playback failed:", e));
+    }
+    
+    // --- ## ENHANCEMENT: Helper to speak the initial welcome message using browser's built-in TTS ---
+    function playAudioFromText(text, lang) {
+        try {
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = lang;
+            window.speechSynthesis.speak(utterance);
+        } catch (e) {
+            console.error("Browser TTS failed:", e);
+        }
+    }
+
+    // --- Main function to send message to backend ---
+    async function sendMessage() {
+      const messageText = userInput.value.trim();
+      if (messageText === '') return;
+
+      addMessage(messageText, 'user');
+      userInput.value = '';
+      showTypingIndicator();
+
+      try {
+        // ## ENHANCEMENT: The fetch request is simplified, no longer sending language.
+        const response = await fetch('http://127.0.0.1:5000/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: messageText }),
+        });
+
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        
+        const data = await response.json();
+        const botResponse = data.response;
+        const botAudio = data.audio; // ## ENHANCEMENT: Get audio data from response.
+        
+        removeTypingIndicator();
+        addMessage(botResponse, 'ai');
+        playAudio(botAudio); // ## ENHANCEMENT: Play the received audio.
+
+      } catch (error) {
+        console.error('Error fetching chatbot response:', error);
+        removeTypingIndicator();
+        addMessage("Sorry, I'm having connection issues. Please try again later.", 'ai');
+      }
+    }
+
+    // --- Event Listeners & Speech Recognition (No changes needed here) ---
+    sendBtn.addEventListener('click', sendMessage);
+    userInput.addEventListener('keypress', (event) => {
+      if (event.key === 'Enter') {
+        sendMessage();
+      }
+    });
+
+    const micBtn = document.getElementById('mic-btn');
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (SpeechRecognition) {
+      const recognition = new SpeechRecognition();
+      recognition.continuous = false;
+      recognition.lang = 'en-US'; 
+      micBtn.addEventListener('click', () => {
+        if (micBtn.classList.contains('recording')) {
+          recognition.stop();
+        } else {
+          try {
+            recognition.start();
+          } catch(e) {
+            alert("Microphone not available or permission denied.");
+          }
+        }
+      });
+      recognition.onstart = () => { micBtn.classList.add('recording'); micBtn.title = 'Stop listening'; };
+      recognition.onend = () => { micBtn.classList.remove('recording'); micBtn.title = 'Speak'; };
+      recognition.onresult = (event) => {
+        userInput.value = event.results[event.resultIndex][0].transcript;
+        sendMessage();
+      };
+      recognition.onerror = (event) => {
+        console.error("Speech recognition error:", event.error);
+        if(event.error === 'not-allowed' || event.error === 'service-not-allowed') {
+            alert("Microphone access was denied. Please allow microphone access in your browser settings.");
+        }
+      };
+    } else {
+      micBtn.style.display = 'none';
+    }
+ </script>
+</body>
+</html>
